@@ -9,10 +9,13 @@ import clearHistory from './controllers/delete.js';
 const db = knex({
 	client: 'pg',
 	connection: {
-		host: '127.0.0.1',
+		connectionString: 'postgresql://postgres:7eNLlMyk5e7TAEZKA3ET@containers-us-west-181.railway.app:7880/railway',
+		ssl: {rejectUnauthorized: false},
+		host: 'containers-us-west-181.railway.app',
+		port: 7880,
 		user: 'postgres',
-		password: 'test',
-		database: 'postgres'
+		password: '7eNLlMyk5e7TAEZKA3ET',
+		database: 'railway'
 	}
 });
 
